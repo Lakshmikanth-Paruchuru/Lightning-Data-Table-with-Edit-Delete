@@ -1,0 +1,6 @@
+<aura:event type="APPLICATION" description="Event template" >
+    <aura:attribute name="sendata" type="string"/>    
+    <aura:attribute name="sendId" type="string"/>
+    <aura:attribute name="bool" type="boolean"/>
+
+</aura:event>

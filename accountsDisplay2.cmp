@@ -1,0 +1,8 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:handler name="message" event="c:LightningEvent" action="{!c.handleComponentEvent}"/>
+    <aura:attribute name="getrecord" type="Id"/>
+    <aura:attribute name="edit2" type="boolean"/>
+    <aura:attribute name="edit3" type="boolean"/>
+		<c:accountsDisplay />       
+    <force:recordView aura:id="edit" recordId="{!v.getrecord}"/>    
+</aura:component>

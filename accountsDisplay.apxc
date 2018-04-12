@@ -1,0 +1,20 @@
+public class accountsDisplay {
+@AuraEnabled
+    public static list<account> getAccounts(){
+        list<account> acc =[select Name, Phone, Industry, Rating, Type FROM Account ORDER BY CREATEDDATE DESC LIMIT 10];
+            return acc;
+    } 
+    @AuraEnabled
+    public static list<contact> getContacts(String name){
+        list<contact> con =[Select Email, Phone, MobilePhone FROM Contact WHERE Account.Name =:name];
+            return con;
+    }
+     @Auraenabled
+    public static List<Account> delteAccountById(String accid)
+    {
+        System.debug('In controller delteAccountById method..');
+        Account delAccount=[Select Id from Account where id=:accid];
+        delete delAccount;
+        return [Select ID, Name, Phone, Industry, Rating, Type from Account ORDER BY CREATEDDATE DESC LIMIT 10];
+    }
+}

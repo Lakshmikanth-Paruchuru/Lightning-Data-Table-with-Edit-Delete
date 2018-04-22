@@ -1,4 +1,4 @@
-# Lightning-Data-Table
+# Lightning-Data-Table with Edit/Delete
 
 Have a look at GIF file for Demo.
 
